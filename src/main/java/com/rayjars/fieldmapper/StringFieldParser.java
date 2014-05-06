@@ -53,6 +53,7 @@ public class StringFieldParser {
 
         for (String format : formats) {
             sdf.applyPattern(format);
+
             try {
                 return sdf.parse(str);
             } catch (ParseException e) {

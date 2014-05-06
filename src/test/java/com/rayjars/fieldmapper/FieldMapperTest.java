@@ -139,7 +139,7 @@ public class FieldMapperTest {
         expectedException.expect(InvalidFieldException.class);
         expectedException.expectCause(isA(ParseException.class));
 
-        parameters.addChild("testDate", "2005-10-06 2:22:55.1 RWE");
+        parameters.addChild("testDate", "2005/10/06 2:22:55.1");
         mapper.mapParamToObject(parameters, annotatedObject);
 
     }
