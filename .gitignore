@@ -1,0 +1,40 @@
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Logs #
+########
+*.log
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+
+# IDE Project files #
+#####################
+*.iml
+*.ipr
+.settings/
+.project
+.classpath
+.idea/
+.metadata/
+
+# Temp directory #
+##################
+bin
+target
