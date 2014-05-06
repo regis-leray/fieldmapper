@@ -126,6 +126,15 @@ public class FieldMapperTest {
     }
 
     @Test
+    public void shouldInjectOnlyDate() throws InvalidFieldException, ParseException {
+        parameters.addChild("testDate", "2005-10-06");
+
+        mapper.mapParamToObject(parameters, annotatedObject);
+        assertThat(annotatedObject.getTestDate(), sameInstant(new SimpleDateFormat(StringFieldParser.ONLY_DATE).parse("2005-10-06")));
+    }
+
+
+    @Test
     public void shouldThrowExceptionIfInvalidDate() throws InvalidFieldException {
         expectedException.expect(InvalidFieldException.class);
         expectedException.expectCause(isA(ParseException.class));

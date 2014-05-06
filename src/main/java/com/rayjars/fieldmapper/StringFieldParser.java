@@ -13,6 +13,7 @@ import java.util.List;
 
 
 public class StringFieldParser {
+    public static final String ONLY_DATE = "yyyy-MM-dd";
     public static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ssa";
     public static final String DATE_MILLSECONDS_FORMAT = "yyyy-MM-dd HH:mm:ss.S a";
 
@@ -43,7 +44,7 @@ public class StringFieldParser {
     }
 
     public Date parseDate(String str) throws ParseException {
-        return parseDate(new String[]{DATE_FORMAT, DATE_MILLSECONDS_FORMAT}, str);
+        return parseDate(new String[]{DATE_FORMAT, DATE_MILLSECONDS_FORMAT, ONLY_DATE}, str);
     }
 
     public Date parseDate(String[] formats, String str) throws ParseException {
